@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/hw33</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.autocommit">false</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="show_sql">true</property>
+
+        <mapping class="org.example.entities.Orders"/>
+        <mapping class="org.example.entities.Categories"/>
+        <mapping class="org.example.entities.Products"/>
+        <mapping class="org.example.entities.Suppliers"/>
+        <mapping class="org.example.entities.Clients"/>
+
+
+    </session-factory>
+</hibernate-configuration>
